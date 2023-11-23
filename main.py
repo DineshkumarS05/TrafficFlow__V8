@@ -139,69 +139,7 @@ while ret:
     cv2.imshow("Video", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-                # if license_plate_text is not None:
-                #     resultss[frame_nmr][car_id] = {'car': {'bbox': [xcar1, ycar1, xcar2, ycar2]},
-                #                                   'license_plate': {'bbox': [x1, y1, x2, y2],
-                #                                                     'text': license_plate_text,
-                #                                                     'bbox_score': score,
-                #                                                     'text_score': license_plate_text_score}}
 
-
-# print(resultss)
-                # print('license_plate_text',license_plate_text)
-
-        
-#         for track in tracker.tracker.tracks:
-#             track_id = track.track_id
-#             hits = track.hits
-#             x1, y1, x2, y2 = track.to_tlbr()  # Get bounding box coordinates in (x1, y1, x2, y2) format
-#             w = x2 - x1  # Calculate width
-#             h = y2 - y1  # Calculate height
-
-#             # Set color values for red, blue, and green
-#             red_color = (0, 0, 255)  # (B, G, R)
-#             blue_color = (255, 0, 0)  # (B, G, R)
-#             green_color = (0, 255, 0)  # (B, G, R)
-
-#             # Determine color based on track_id
-#             color_id = track_id % 3
-#             if color_id == 0:
-#                 color = red_color
-#             elif color_id == 1:
-#                 color = blue_color
-#             else:
-#                 color = green_color
-
-#             cv2.rectangle(og_frame, (int(x1), int(y1)), (int(x1 + w), int(y1 + h)), color, 2)
-
-#             text_color = (255, 255, 255)  # Black color for text
-#             cv2.putText(og_frame, f"{class_name}-{track_id}", (int(x1) + 10, int(y1) - 5), cv2.FONT_HERSHEY_DUPLEX, 0.5, text_color, 1, cv2.LINE_AA)
-
-#             # Add the track_id to the set of unique track IDs
-#             unique_track_ids.add(track_id)
-
-#         # Update the person count based on the number of unique track IDs
-#         person_count = len(unique_track_ids)
-
-#         # Update FPS and place on frame
-#         current_time = time.perf_counter()
-#         elapsed = (current_time - start_time)
-#         counter += 1
-#         if elapsed > 1:
-#             fps = counter / elapsed
-#             counter = 0
-#             start_time = current_time
-
-#         # Draw person count on frame
-#         cv2.putText(og_frame, f"Person Count: {person_count}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
-
-#         # Append the frame to the list
-#         frames.append(og_frame)
-
-#         # Write the frame to the output video file
-#         out.write(cv2.cvtColor(og_frame, cv2.COLOR_RGB2BGR))
-
-#         # Show the frame
 
 
 cap.release()
